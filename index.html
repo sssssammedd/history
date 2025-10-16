@@ -1,1 +1,58 @@
-Hello nigga
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aboriginal Visual Essay</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+	<header class="hero">
+		<div class="overlay"></div>
+		<h1 class="title">The Living Land: An Aboriginal Perspective</h1>
+		<p class="subtitle">A Visual Essay on Connection, Culture, and Country</p>
+	</header>
+	<main class="content">
+		<section class="essay-section">
+			<h2>Introduction</h2>
+			<p>
+				For tens of thousands of years, Aboriginal peoples have lived in deep relationship with the land now called Australia. Their stories, art, and traditions are woven into the very soil, rivers, and skies. This essay explores the enduring connection between Aboriginal communities and Country, celebrating a culture of resilience, wisdom, and belonging.
+			</p>
+		</section>
+		<section class="essay-section">
+			<h2>Country: More Than Land</h2>
+			<p>
+				In Aboriginal worldview, "Country" is not just a place. It is a living entity—home to ancestors, spirits, and stories. Every rock, tree, and waterhole holds meaning. Caring for Country is a sacred duty, passed down through generations via songlines, ceremonies, and oral histories.
+			</p>
+		</section>
+		<section class="essay-section">
+			<h2>Art as Storytelling</h2>
+			<p>
+				Aboriginal art is a vibrant language. Dots, lines, and earthy colors map journeys, record histories, and teach lessons. From ancient rock paintings to contemporary canvases, these artworks are living archives, connecting people to ancestors and place.
+			</p>
+		</section>
+		<section class="essay-section">
+			<h2>Resilience and Renewal</h2>
+			<p>
+				Despite colonization and ongoing challenges, Aboriginal cultures endure. Elders share knowledge, young people reclaim language, and communities celebrate identity through festivals, dance, and activism. The spirit of renewal is ever-present, echoing in the land and its people.
+			</p>
+		</section>
+		<section class="essay-section conclusion">
+			<h2>Conclusion</h2>
+			<p>
+				To walk on this land is to walk among stories. Aboriginal perspectives invite us to listen, learn, and honor the deep wisdom of Country. In doing so, we find new ways to belong—to each other, and to the earth beneath our feet.
+			</p>
+		</section>
+	</main>
+	<footer>
+		<p>Visual Essay &copy; 2025 | Inspired by Aboriginal Culture</p>
+	</footer>
+	<script>
+	  // GSAP Animations
+	  gsap.from(".hero .title", {duration: 1.2, y: -60, opacity: 0, ease: "power2.out"});
+	  gsap.from(".hero .subtitle", {duration: 1, y: 40, opacity: 0, delay: 0.5, ease: "power2.out"});
+	  gsap.from(".essay-section", {duration: 1, y: 60, opacity: 0, stagger: 0.3, delay: 1, ease: "power2.out"});
+	</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+
+/* Aboriginal-inspired color palette */
+:root {
+	--earth: #7c4a03;
+	--ochre: #d98c1d;
+	--sky: #3a5a40;
+	--sand: #f4e2d8;
+	--dot-red: #b71c1c;
+	--dot-yellow: #ffd600;
+	--dot-white: #fff;
+}
+
+body {
+	margin: 0;
+	font-family: 'Segoe UI', 'Arial', sans-serif;
+	background: var(--sand);
+	color: #222;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+header.hero {
+	position: relative;
+	background: linear-gradient(120deg, var(--earth) 60%, var(--ochre) 100%);
+	color: #fff;
+	padding: 4rem 1.5rem 2rem 1.5rem;
+	text-align: center;
+	overflow: hidden;
+}
+
+header.hero .overlay {
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+	opacity: 0.18;
+	z-index: 0;
+}
+
+header.hero .title {
+	position: relative;
+	font-size: 2.5rem;
+	letter-spacing: 2px;
+	margin-bottom: 0.5rem;
+	z-index: 1;
+}
+
+header.hero .subtitle {
+	position: relative;
+	font-size: 1.2rem;
+	font-weight: 400;
+	z-index: 1;
+}
+
+main.content {
+	flex: 1;
+	max-width: 800px;
+	margin: 2rem auto;
+	padding: 1.5rem;
+	background: #fff8f0cc;
+	border-radius: 1.2rem;
+	box-shadow: 0 4px 24px 0 #0001;
+}
+
+.essay-section {
+	margin-bottom: 2.5rem;
+	border-left: 6px dotted var(--earth);
+	padding-left: 1.2rem;
+	position: relative;
+}
+
+.essay-section h2 {
+	color: var(--sky);
+	margin-top: 0;
+	font-size: 1.4rem;
+	letter-spacing: 1px;
+}
+
+.essay-section p {
+	font-size: 1.08rem;
+	line-height: 1.7;
+}
+
+.essay-section.conclusion {
+	border-color: var(--dot-red);
+}
+
+footer {
+	text-align: center;
+	padding: 1.2rem 0 0.7rem 0;
+	background: var(--earth);
+	color: #fff;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	border-top-left-radius: 1.2rem;
+	border-top-right-radius: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+	main.content {
+		margin: 1rem 0.2rem;
+		padding: 1rem 0.5rem;
+	}
+	header.hero {
+		padding: 2.5rem 0.5rem 1.2rem 0.5rem;
+	}
+	.essay-section {
+		padding-left: 0.7rem;
+	}
+	.essay-section h2 {
+		font-size: 1.1rem;
+	}
+}
+
+/* Aboriginal dot pattern accent (optional, for visual interest) */
+.hero::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	width: 120px;
+	height: 24px;
+	background:
+		radial-gradient(circle, var(--dot-red) 4px, transparent 5px) 0 0,
+		radial-gradient(circle, var(--dot-yellow) 4px, transparent 5px) 30px 0,
+		radial-gradient(circle, var(--dot-white) 4px, transparent 5px) 60px 0,
+		radial-gradient(circle, var(--dot-red) 4px, transparent 5px) 90px 0;
+	background-size: 30px 24px;
+	background-repeat: repeat-x;
+	opacity: 0.7;
+	z-index: 2;
+}
