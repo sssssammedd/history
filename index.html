@@ -1,58 +1,281 @@
+<!--
+README: Indigenous Land Rights in Australia — Year 10 History Project
+---------------------------------------------------------------------
+- Author: Sam Eddy, Central Coast Grammar School, 2025
+- Files: index.html, style.css, script.js
+- To deploy: Upload all files to GitHub and enable GitHub Pages (main branch, /root).
+- Replace all placeholder images, icons, and stats with your own or verified sources.
+- Update citation links and chart data as needed.
+- All code is accessible, responsive, and ready for static hosting.
+- Example screenshot: [ADD_SCREENSHOT_HERE]
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Aboriginal Visual Essay</title>
-	<link rel="stylesheet" href="stylesheet.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indigenous Land Rights in Australia</title>
+  <meta name="description" content="A modern, visually immersive educational site about Indigenous Land Rights in Australia.">
+  <!-- Preload hero image and fonts for performance -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400&family=Playfair+Display:wght@700&display=swap" as="style">
+  <link rel="preload" href="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=60" as="image">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header class="hero">
-		<div class="overlay"></div>
-		<h1 class="title">The Living Land: An Aboriginal Perspective</h1>
-		<p class="subtitle">A Visual Essay on Connection, Culture, and Country</p>
-	</header>
-	<main class="content">
-		<section class="essay-section">
-			<h2>Introduction</h2>
-			<p>
-				For tens of thousands of years, Aboriginal peoples have lived in deep relationship with the land now called Australia. Their stories, art, and traditions are woven into the very soil, rivers, and skies. This essay explores the enduring connection between Aboriginal communities and Country, celebrating a culture of resilience, wisdom, and belonging.
-			</p>
-		</section>
-		<section class="essay-section">
-			<h2>Country: More Than Land</h2>
-			<p>
-				In Aboriginal worldview, "Country" is not just a place. It is a living entity—home to ancestors, spirits, and stories. Every rock, tree, and waterhole holds meaning. Caring for Country is a sacred duty, passed down through generations via songlines, ceremonies, and oral histories.
-			</p>
-		</section>
-		<section class="essay-section">
-			<h2>Art as Storytelling</h2>
-			<p>
-				Aboriginal art is a vibrant language. Dots, lines, and earthy colors map journeys, record histories, and teach lessons. From ancient rock paintings to contemporary canvases, these artworks are living archives, connecting people to ancestors and place.
-			</p>
-		</section>
-		<section class="essay-section">
-			<h2>Resilience and Renewal</h2>
-			<p>
-				Despite colonization and ongoing challenges, Aboriginal cultures endure. Elders share knowledge, young people reclaim language, and communities celebrate identity through festivals, dance, and activism. The spirit of renewal is ever-present, echoing in the land and its people.
-			</p>
-		</section>
-		<section class="essay-section conclusion">
-			<h2>Conclusion</h2>
-			<p>
-				To walk on this land is to walk among stories. Aboriginal perspectives invite us to listen, learn, and honor the deep wisdom of Country. In doing so, we find new ways to belong—to each other, and to the earth beneath our feet.
-			</p>
-		</section>
-	</main>
-	<footer>
-		<p>Visual Essay &copy; 2025 | Inspired by Aboriginal Culture</p>
-	</footer>
-	<script>
-	  // GSAP Animations
-	  gsap.from(".hero .title", {duration: 1.2, y: -60, opacity: 0, ease: "power2.out"});
-	  gsap.from(".hero .subtitle", {duration: 1, y: 40, opacity: 0, delay: 0.5, ease: "power2.out"});
-	  gsap.from(".essay-section", {duration: 1, y: 60, opacity: 0, stagger: 0.3, delay: 1, ease: "power2.out"});
-	</script>
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1 class="hero-title reveal">Indigenous Land Rights in Australia</h1>
+      <p class="hero-subtitle reveal">A journey toward recognition, justice, and ownership of Country.</p>
+      <div class="hero-byline reveal">By Sam Eddy – Year 10 History Project, Central Coast Grammar School</div>
+      <button class="scroll-indicator" aria-label="Scroll Down" onclick="document.getElementById('facts').scrollIntoView({behavior:'smooth'})">
+        <span>&#8595;</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Key Facts / Overview Section -->
+  <section id="facts" class="facts-section">
+    <div class="facts-grid">
+      <div class="fact-card reveal">
+        <div class="fact-icon" aria-hidden="true">🌏</div>
+        <div class="fact-stat" data-count="40">0</div>
+        <div class="fact-label">Over 40% of Australia’s land is under Native Title</div>
+      </div>
+      <div class="fact-card reveal">
+        <div class="fact-icon" aria-hidden="true">⚖️</div>
+        <div class="fact-stat" data-count="1992">0</div>
+        <div class="fact-label">Mabo Decision (1992) overturned <em>terra nullius</em></div>
+      </div>
+      <div class="fact-card reveal">
+        <div class="fact-icon" aria-hidden="true">🤝</div>
+        <div class="fact-stat" data-count="2000">0</div>
+        <div class="fact-label">Over 2,000+ Indigenous Land Use Agreements (ILUAs) registered</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Are Land Rights? -->
+  <section id="intro" class="intro-section">
+    <div class="intro-grid">
+      <div class="intro-text reveal">
+        <h2>What Are Land Rights?</h2>
+        <p>Land rights recognize the deep, spiritual connection between First Nations peoples and Country. For Indigenous Australians, land is not just property. It is identity, law, heritage, and the foundation of culture and community. Land is where stories are told, ceremonies are held, and ancestors are honored.</p>
+        <ul>
+          <li><strong>Legal Recognition:</strong> Land rights laws and native title acknowledge Indigenous peoples' prior ownership and ongoing connection to Country, overturning the myth of <em>terra nullius</em>.</li>
+          <li><strong>Cultural Survival:</strong> Access to land enables the continuation of language, tradition, and cultural practices, which are vital for community wellbeing.</li>
+          <li><strong>Economic Opportunity:</strong> Land rights can provide pathways for self-determination, economic development, and sustainable management of resources.</li>
+          <li><strong>Justice & Reconciliation:</strong> Recognizing land rights is a step toward addressing historical injustices and building a more equitable future for all Australians.</li>
+        </ul>
+        <blockquote class="intro-quote">
+          “Land is central to our being. It connects us to our past, our ancestors, and our future.”
+          <span class="quote-cite">– Indigenous Elder (AIATSIS, 2023)</span>
+        </blockquote>
+      </div>
+      <div class="intro-image reveal">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=60" alt="Australian outback landscape" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Historical Timeline -->
+  <section id="timeline" class="timeline-section parallax-bg parallax-timeline">
+    <h2 class="timeline-title reveal">Key Milestones in Land Rights</h2>
+    <div class="timeline-container">
+      <!-- Each .timeline-item is a milestone; now with primary source links and quotes -->
+      <div class="timeline-item reveal">
+        <div class="timeline-year">1963</div>
+        <div class="timeline-dot" aria-hidden="true">🪶</div>
+        <div class="timeline-desc">Yirrkala Bark Petitions: First formal assertion of Indigenous land rights to Parliament. <a href="https://www.nma.gov.au/explore/features/yirrkala-bark-petitions" target="_blank">[View Primary Source]</a></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-year">1966</div>
+        <div class="timeline-dot" aria-hidden="true">🚶‍♂️</div>
+        <div class="timeline-desc">Wave Hill Walk-Off: Gurindji strike for wages and land, sparking national movement. <a href="https://www.abc.net.au/news/2016-08-23/wave-hill-walk-off-50-years-on/7774172" target="_blank">[ABC News]</a></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-year">1976</div>
+        <div class="timeline-dot" aria-hidden="true">📜</div>
+        <div class="timeline-desc">Aboriginal Land Rights (NT) Act: First law to recognize Indigenous land ownership. <a href="https://www.legislation.gov.au/Details/C2004A01604" target="_blank">[Read Act]</a></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-year">1992</div>
+        <div class="timeline-dot" aria-hidden="true">⚖️</div>
+        <div class="timeline-desc">Mabo Decision: High Court overturns <em>terra nullius</em>, recognizes native title. <a href="https://www.mabonativetitle.com.au/mabo-case/" target="_blank">[Case Documents]</a></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-year">1993</div>
+        <div class="timeline-dot" aria-hidden="true">📑</div>
+        <div class="timeline-desc">Native Title Act: Establishes legal process for native title claims. <a href="https://www.legislation.gov.au/Details/C2019C00141" target="_blank">[Read Act]</a></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2008</div>
+        <div class="timeline-dot" aria-hidden="true">🗣️</div>
+        <div class="timeline-desc">National Apology: Government formally apologizes to Stolen Generations. <a href="https://www.australia.gov.au/about-australia/our-country/our-people/apology-to-australias-indigenous-peoples" target="_blank">[Transcript]</a></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-dot" aria-hidden="true">🗳️</div>
+        <div class="timeline-desc">Voice to Parliament Referendum: National debate on Indigenous representation. <a href="https://www.abc.net.au/news/2023-10-14/voice-to-parliament-referendum-results/102953370" target="_blank">[ABC Coverage]</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data Visualization Section -->
+  <section id="data" class="data-section">
+    <h2 class="data-title reveal">Land Rights by the Numbers</h2>
+    <div class="data-charts">
+      <div class="chart-card reveal">
+        <canvas id="pieChart" width="220" height="220" aria-label="Pie chart: Native Title vs Other Tenures"></canvas>
+        <div class="chart-caption">Proportion of Australia under Native Title</div>
+      </div>
+      <div class="chart-card reveal">
+        <canvas id="barChart" width="380" height="180" aria-label="Bar chart: Native Title Claims by State"></canvas>
+        <div class="chart-caption">Native Title Claims by State</div>
+      </div>
+      <div class="chart-card reveal">
+        <div class="chart-counter" data-count="647">0</div>
+        <div class="chart-caption">Native Title Determinations Approved</div>
+      </div>
+    </div>
+    <!-- Data source citation -->
+    <div class="data-source">* Data: AIATSIS, NNTT, ABS (see sources below)</div>
+  </section>
+
+  <!-- Progress & Ongoing Challenges -->
+  <section id="progress" class="progress-section">
+    <div class="progress-grid">
+      <div class="progress-card reveal">
+        <h3>Milestones Achieved</h3>
+        <ul>
+          <li><span class="card-icon" aria-hidden="true">⬆️</span> 1992 Mabo Decision recognized native title</li>
+          <li><span class="card-icon" aria-hidden="true">📑</span> 1993 Native Title Act legislated rights</li>
+          <li><span class="card-icon" aria-hidden="true">🌏</span> Over 40% of land area now recognized</li>
+        </ul>
+      </div>
+      <div class="challenges-card reveal">
+        <h3>The Work Ahead</h3>
+        <ul>
+          <li><span class="card-icon" aria-hidden="true">⚠️</span> Ongoing mining conflicts</li>
+          <li><span class="card-icon" aria-hidden="true">🚧</span> Limited access to traditional lands</li>
+          <li><span class="card-icon" aria-hidden="true">🔒</span> Low Indigenous land ownership (&lt;1% of population)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reflection / Analysis Section -->
+  <section id="reflection" class="reflection-section">
+    <h2 class="reflection-title reveal">Inquiry: Has the struggle stalled?</h2>
+    <div class="reflection-grid">
+      <div class="reflection-col reveal">
+        <h3>Progress</h3>
+        <ul>
+          <li>Legal recognition of native title through landmark court decisions and legislation.</li>
+          <li>Growing public awareness and support for Indigenous rights and reconciliation.</li>
+          <li>Return of significant areas of land to Indigenous communities, enabling cultural renewal.</li>
+          <li>Increased Indigenous participation in land management and decision-making.</li>
+        </ul>
+      </div>
+      <div class="reflection-col reveal">
+        <h3>Ongoing Challenges</h3>
+        <ul>
+          <li>Slow reform and implementation: Many claims remain unresolved, and legal processes can be lengthy and complex.</li>
+          <li>Limited practical control: Legal recognition does not always translate to full control or benefit from land.</li>
+          <li>Economic and social barriers: Indigenous communities often face challenges in leveraging land rights for economic development.</li>
+          <li>Political debate: National conversations, such as the Voice to Parliament referendum, show that the struggle for recognition and justice is ongoing.</li>
+        </ul>
+      </div>
+    </div>
+    <blockquote class="reflection-quote reveal">
+      “While great strides have been made, the struggle for true land justice continues. Progress is real, but the journey is far from over.”
+    </blockquote>
+  </section>
+
+  <!-- Image Gallery / Cultural Showcase -->
+  <section id="gallery" class="gallery-section parallax-bg parallax-gallery">
+    <h2 class="gallery-title reveal">Cultural Showcase</h2>
+    <div class="gallery-grid">
+      <!-- Replace images and captions with your own -->
+      <figure class="gallery-item reveal">
+        <img src="https://www.nma.gov.au/__data/assets/image/0006/790143/MA23242142-Yirrkala-bark-petition.jpg" alt="Yirrkala Bark Petition" loading="lazy">
+        <figcaption>Yirrkala Bark Petition</figcaption>
+      </figure>
+      <figure class="gallery-item reveal">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWUlGvv4vFKimMYCCSudP-0qSmXAnT6tOz9w&s" alt="Wave Hill Walk-Off" loading="lazy">
+        <figcaption>Wave Hill Walk-Off</figcaption>
+      </figure>
+      <figure class="gallery-item reveal">
+        <img src="https://mmsprodsa.blob.core.windows.net/attachments/217bff54-986b-45f8-8324-1c3f82160eec/web-EddieMabo.jpg" alt="Eddie Mabo Portrait" loading="lazy">
+        <figcaption>Eddie Mabo</figcaption>
+      </figure>
+      <figure class="gallery-item reveal">
+        <img src="https://i.dailymail.co.uk/1s/2023/09/13/00/75357799-0-image-m-13_1694560613600.jpg" alt="Native Title Map" loading="lazy">
+        <figcaption>Native Title Map</figcaption>
+      </figure>
+      <figure class="gallery-item reveal">
+        <img src="https://live-production.wcms.abc-cdn.net.au/9a928499e677c9ffb894c17875a05115?impolicy=wcms_crop_resize&cropH=3333&cropW=5000&xPos=0&yPos=0&width=862&height=575" alt="Sacred Site Protection" loading="lazy">
+        <figcaption>Sacred Site Protection</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Call to Reflection / Closing Section -->
+  <section id="closing" class="closing-section parallax-bg parallax-closing">
+    <h2 class="closing-title reveal">Looking Forward</h2>
+    <p class="closing-message reveal">
+      “Land Rights are more than a legal issue — they are a matter of identity, justice, and cultural survival.”
+    </p>
+    <button class="cta-button reveal" aria-label="Learn More" onclick="document.getElementById('sources').scrollIntoView({behavior:'smooth'})">
+      Learn More
+    </button>
+    <!-- Decorative background shapes (CSS) -->
+    <div class="closing-bg"></div>
+  </section>
+
+  <!-- Sources & Further Reading -->
+  <section id="sources" class="sources-section">
+    <h2 class="sources-title reveal">Sources & Further Reading</h2>
+    <div class="sources-list">
+      <div class="sources-col">
+        <ul>
+          <li><a href="https://aiatsis.gov.au" target="_blank">AIATSIS – Indigenous Land Rights and Native Title</a></li>
+          <li><a href="https://nma.gov.au" target="_blank">National Museum of Australia – Defining Moments: Mabo Decision</a></li>
+          <li><a href="https://abs.gov.au" target="_blank">Australian Bureau of Statistics – Aboriginal and Torres Strait Islander Statistics</a></li>
+          <li><a href="https://www.nma.gov.au/explore/features/yirrkala-bark-petitions" target="_blank">Yirrkala Bark Petitions (Primary Source)</a></li>
+          <li><a href="https://www.abc.net.au/news/2016-08-23/wave-hill-walk-off-50-years-on/7774172" target="_blank">Wave Hill Walk-Off – ABC News (Primary Source)</a></li>
+          <li><a href="https://www.mabonativetitle.com.au/mabo-case/" target="_blank">Mabo Case Documents (Primary Source)</a></li>
+          <li><a href="https://www.legislation.gov.au/Details/C2004A01604" target="_blank">Aboriginal Land Rights (Northern Territory) Act 1976 (Primary Source)</a></li>
+          <li><a href="https://www.legislation.gov.au/Details/C2019C00141" target="_blank">Native Title Act 1993 (Primary Source)</a></li>
+          <li><a href="https://www.aph.gov.au/Parliamentary_Business/Committees/Joint/Former_Committees/atsia/Completed_inquiries/1998-01/nttitle/report/nttitle.pdf" target="_blank">Parliamentary Report: Native Title (Primary Source)</a></li>
+        </ul>
+      </div>
+      <div class="sources-col">
+        <ul>
+          <li><a href="https://www.sbs.com.au/learn" target="_blank">SBS Learn – Understanding the Native Title Act</a></li>
+          <li><a href="https://humanrights.gov.au" target="_blank">Australian Human Rights Commission – Rights and Freedoms Overview</a></li>
+          <li><a href="https://www.reconciliation.org.au/" target="_blank">Reconciliation Australia – Resources</a></li>
+          <li><a href="https://www.abc.net.au/indigenous" target="_blank">ABC Indigenous – News and Features</a></li>
+          <li><a href="https://www.nntt.gov.au/Pages/Home-Page.aspx" target="_blank">National Native Title Tribunal (NNTT)</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <span>By Sam Eddy — Year 10 History Project, Central Coast Grammar School</span>
+      <span>© 2025 Indigenous Rights Awareness Project</span>
+      <a href="#hero" class="footer-top" aria-label="Back to Top">&#8593;</a>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="script.js" defer></script>
 </body>
 </html>
