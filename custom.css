@@ -1,0 +1,51 @@
+/* custom.css — small helper styles for glassmorphism and theme overrides */
+:root{
+  --bg:#101820;
+  --glass-bg: rgba(255,255,255,0.08);
+  --glass-strong: rgba(255,255,255,0.16);
+  --muted:#d7d7d7;
+}
+html,body{height:100%;}
+/* Glass base */
+.glass{
+  background: var(--glass-bg);
+  box-shadow: 0 8px 40px rgba(2,6,23,0.65), 0 1px 0 rgba(255,255,255,0.02) inset;
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px) saturate(120%);
+}
+.border-gradient{
+  border-image: linear-gradient(90deg,#ffd7a8,#ffd1b8) 1;
+}
+.border-gradient-left{border-left-width:4px; border-left-style:solid;}
+
+/* Utilities for small screens */
+@media (max-width:640px){
+  .glass{padding:1rem!important}
+}
+
+/* subtle gradient border for quote */
+.border-gradient{border-left-width:4px;border-left-style:solid;border-left-color:transparent;background-clip:padding-box}
+
+/* accessibility tweaks */
+button:focus{outline:2px solid rgba(255,255,255,0.12);outline-offset:3px}
+
+/* Slight zoom for background on load */
+#hero .transform-gpu{transform:scale(1.03)}
+
+/* small helpers */
+.text-muted{color:var(--muted)}
+
+/* Modal styles */
+#modal-backdrop{transition:opacity 0.28s ease}
+#modal{max-height:80vh; overflow:auto}
+
+/* Table styles inside glass */
+table td, table th { padding: 0.5rem 0.75rem }
+table thead th { font-weight:600 }
+
+/* ensure nav sits above floating quote */
+.glass-nav{z-index:60}
+
+#modal{z-index:70}
+#modal-backdrop{z-index:65}
+
